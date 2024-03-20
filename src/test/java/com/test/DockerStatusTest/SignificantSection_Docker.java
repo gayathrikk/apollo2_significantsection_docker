@@ -35,6 +35,8 @@ public class SignificantSection_Docker {
 		String username = "hbp";
 		String password = "Health#123"; // Consider using a more secure method to handle passwords
 		String containerId = "65f7a53cf587"; // Replace with your container's ID
+		 System.out.println("Apollo2 significantsection Docker is = "+containerId);
+		
 		if (containerId.isEmpty()) {
 			System.out.println("Container ID is required.");
 			return;
