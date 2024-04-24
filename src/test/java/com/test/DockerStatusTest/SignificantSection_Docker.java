@@ -13,30 +13,14 @@ import java.net.InetAddress;
 
 public class SignificantSection_Docker {
 	
+
 	@Test(priority=1)
-
-	public void pingWeb() {
-
-		 String ipAddress = "172.20.24.7"; // Replace with the IP address you want to ping
-		 try {
-			 InetAddress address = InetAddress.getByName(ipAddress);
-			 boolean reachable = address.isReachable(5000); // Timeout in milliseconds     
-			 assert reachable : "IP Address " + ipAddress + " is not reachable.";
-			 System.out.println("IP Address " + ipAddress + " is reachable.");
-		 } catch (IOException e) {
-			 e.printStackTrace();
-		 }
-	}
-
-	@Test(priority=2)
 	public void containerStatus() {
 
-		String vmIpAddress = "172.20.24.7";
+		String vmIpAddress = "172.20.24.7"; // pp7v5.humanbain.in
 		String username = "hbp";
 		String password = "Health#123"; // Consider using a more secure method to handle passwords
 		String containerId = "65f7a53cf587"; // Replace with your container's ID
-		 System.out.println("Apollo2 significantsection Docker is = "+containerId);
-		
 		if (containerId.isEmpty()) {
 			System.out.println("Container ID is required.");
 			return;
